@@ -68,47 +68,30 @@ def check_nam(e):
 # dictionary containing element information 
 nonmetals= {"H" : ("Hydrogen", 1, 1.008), #all non metal elements
                 #    1       2    3
-            "h" : ("Hydrogen", 1, 1.008),
             "He" : ("Helium", 2, 4.0026),
-            "he" : ("Helium", 2, 4.0026),
             "C" : ("Carbon", 6, 12.011),
-            "c" : ("Carbon", 6, 12.011),            
             "N" : ("Nitrogen", 7, 14.007),
-            "n" : ("Nitrogen", 7, 14.007),
             "O" : ("Oxygen", 8, 15.999),
-            "o" : ("Oxygen", 8, 15.999),
             "F" : ("Flourine", 9, 18.998),
-            "f" : ("Flourine", 9, 18.998),
             "Ne" : ("Neon", 10, 20.180),
-            "ne" : ("Neon", 10, 20.180),            
             "P" : ("Phosphorus", 15, 30.974),
-            "p" : ("Phosphorus", 15, 30.974),
             "S" : ("Sulfur", 16, 32.06),
-            "s" : ("Sulfur", 16, 32.06),
             "Cl" : ("Chlorine", 17, 35.45),
-            "cl" : ("Chlorine", 17, 35.45),
             "Ar" : ("Argon", 18, 39.948),
-            "ar" : ("Argon", 18, 39.948),
             "Se" : ("Selenium", 34, 78.971),
-            "se" : ("Selenium", 34, 78.971),
             "Br" : ("Bromine", 35, 79.904),
-            "br" : ("Bromine", 35, 79.904),
             "Kr" : ("Krypton", 36, 83.798),
-            "kr" : ("Krypton", 36, 83.798),
             "I" : ("Iodine", 53, 126.90),
-            "i" : ("Iodine", 53, 126.90),
             "Xe" : ("Xenon", 54, 131.29),
-            "xe" : ("Xenon", 54, 131.29),
             "Rn" : ("Radon", 86, 222),
-            "rn" : ("Radon", 86, 222),
         }
 
 # Element Symbol, Element Name, Atomic Number, Atomic Mass
 
 #fuction to search for the element's information
 def search_element(e):
-    # Get the input from HTML
-    Nonmetal1= document.getElementById("element1").value
+    # Get the element symbol and correct its spacing and capitalization.
+    Nonmetal1 = document.getElementById("element1").value.strip().capitalize()
     #retrieve information from dictionary
     result = nonmetals.get(Nonmetal1, ("Element not found", "-", "-"))  #display the result in html
     # symbol, name, number, mass
