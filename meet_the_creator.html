@@ -9,64 +9,81 @@
     <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script><title>ICT 10</title>
     
     <style>
-     
-        body {
-            background-color: #2457a7;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+  
+    body {
+        background-color: #2457a7;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 15px;
-            max-width: 600px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
+    }
 
-
-        input {
-            width: 98%;
-            padding: 12px;
-            border: 2px solid #2196F3;
-            border-radius: 8px;
-            margin: 15px 0;
-            font-size: 18px;
-        }
-
-        .result {
-            background-color: #E3F2FD;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 25px;
-            text-align: left;
-        }
-
-         h1 {
-            color: #1565C0;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-    
-   nav {
-       width: 100%;
-       background-color: rgba(157, 11, 11);
-       text-decoration: none;
-       display: flex;
-   }
+    .container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        max-width: 600px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        margin-top: 100px;
+    }
 
 
-   nav ul {
-       width: max-content;
-       color: rgb(7, 7, 7);
-       list-style: none;
-       text-decoration: none;
-       outline: none;
-   }
+    input {
+        width: 98%;
+        padding: 12px;
+        border: 2px solid #2196F3;
+        border-radius: 8px;
+        margin: 15px 0;
+        font-size: 18px;
+    }
 
+    .result {
+        background-color: #E3F2FD;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 25px;
+        text-align: left;
+        font-size: large;
+    }
+
+    h1 {
+        color: #1565C0;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .photo {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    nav {
+        width: 100%;
+        background-color: #204786;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px 15px;
+        box-sizing: border-box;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+    }
+
+    nav a {
+        text-decoration: none;
+        font-size: 18px;
+        color: #000;
+    }
 
 
 </style>
@@ -75,54 +92,45 @@
 
 <body>
 
+    <!-- NAV BAR -->
     <nav>
 
-     <ul>
-         <li>
-            <a href="Club_Member_Checker.html" style="outline: none; text-decoration: none; font-size: 25px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-               Homepage: Club Member Checker
-            </a>
-         </li>
-     </ul>
-
-        <ul>
-         <li>
-            <a href="School_Club_Member.html" style="outline: none; text-decoration: none; font-size: 25px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-               School Club Members 
-            </a>
-         </li>
-     </ul>
-
-      <ul>
-         <li>
-            <a href="element.html" style="outline: none; text-decoration: none; font-size: 25px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-               Element Checker 
-            </a>
-         </li>
-     </ul>
+    <ul>
+        <li>
+            <a href="Club_Member_Checker.html">Club Member Checker</a>
+        </li>
+    </ul>
 
     <ul>
-         <li>
-            <a href="meet_the_creator.html" style="outline: none; text-decoration: none; font-size: 25px; color: black; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-               Meet the Creator 
-            </a>
-         </li>
-     </ul>
+        <li>
+            <a href="School_Club_Member.html">School Club Members</a>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <a href="element.html">Element Checker</a>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <a href="meet_the_creator.html">Meet the Creator</a>
+        </li>
+    </ul>
+
+    </nav>
 
     <div class="container">
         <h1>Meet The Creator</h1>
-        <p>ADD PHOTO SOON</p>
         <img src="student_photo.jpeg" class="photo">
 
         
     <div class=result>
-        <p><b>Name:</b> Johanna Maria Ramos <span id="name"></span></p>
-        <p><b>Grade and Section:</b>  10-Emerald<span id="gs"></span></p>
-        <p><b>Campus:</b>  Fairview <span id="campus"></span></p>
+        <p><b>Name:</b> Johanna Maria Ramos <span id="name"></span></p> <!-- my name -->
+        <p><b>Grade and Section:</b>  10-Emerald<span id="gs"></span></p> <!-- my section -->
+        <p><b>Campus:</b>  Fairview <span id="campus"></span></p> <!-- my campus -->
     </div>
-        
-
-        
 
 </div>
 
